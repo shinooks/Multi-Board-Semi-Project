@@ -1,0 +1,145 @@
+{
+    "posts": [
+      {
+        "postId": "af95dba4f695",
+        "author": {
+          "name": "Ashish Pratap Singh",
+          "profileImage": "https://miro.medium.com/v2/resize:fill:20:20/1*3JnDs01J7nwjxE485ajqTg.png",
+          "publication": "AlgoMaster.io",
+          "publicationUrl": "https://medium.com/algomaster-io"
+        },
+        "title": "How I Tricked My Brain to Be Addicted to Coding",
+        "subtitle": "The Dopamine Hack",
+        "createdAt": "2023-11-15",
+        "stats": {
+          "views": 2700,
+          "responses": 41,
+          "claps": 7721
+        },
+        "thumbnail": {
+          "small": "https://miro.medium.com/v2/resize:fill:80:53/1*IodtST4Qfwjaur7Pnn9kXg.png",
+          "large": "https://miro.medium.com/v2/resize:fill:160:107/1*IodtST4Qfwjaur7Pnn9kXg.png"
+        },
+        "links": {
+          "storyUrl": "https://medium.com/algomaster-io/how-i-tricked-my-brain-to-be-addicted-to-coding-af95dba4f695",
+          "authorUrl": "/@ashishps"
+        },
+        "tags": ["Coding", "Productivity", "Dopamine Hack"],
+        "metadata": {
+          "isMemberOnly": true,
+          "isSaved": false,
+          "updatedAt": "2023-11-15T12:00:00Z"
+        }
+      },
+      {
+        "postId": "fee466fe949e",
+        "author": {
+          "name": "Joel Wembo",
+          "profileImage": "https://miro.medium.com/v2/resize:fill:20:20/1*nXyvQ3PIVmE63EPQ1uSIHw.png",
+          "publication": "Django Unleashed",
+          "publicationUrl": "https://medium.com/django-unleashed"
+        },
+        "title": "Technical Guide: End-to-End CI/CD DevOps with Jenkins, Docker, Kubernetes, ArgoCD, Github Actions",
+        "subtitle": "Building an end-to-end CI/CD pipeline for Django applications using Jenkins, Docker, Kubernetes, ArgoCD, AWS EKS, AWS EC2",
+        "createdAt": "2023-04-13",
+        "stats": {
+          "views": 971,
+          "responses": 21,
+          "claps": 0
+        },
+        "thumbnail": {
+          "small": "https://miro.medium.com/v2/resize:fill:80:53/1*rlPRYAfJ_aFOfoj52U7y2A.png",
+          "large": "https://miro.medium.com/v2/resize:fill:160:107/1*rlPRYAfJ_aFOfoj52U7y2A.png"
+        },
+        "links": {
+          "storyUrl": "https://medium.com/django-unleashed/technical-guide-end-to-end-ci-cd-devops-with-jenkins-docker-kubernetes-argocd-github-actions-fee466fe949e",
+          "authorUrl": "/@joelotepawembo"
+        },
+        "tags": ["CI/CD", "DevOps", "Jenkins", "Kubernetes", "Django"],
+        "metadata": {
+          "isMemberOnly": true,
+          "isSaved": false,
+          "updatedAt": "2023-04-13T12:00:00Z"
+        }
+      },
+      {
+        "postId": "fee466fe949e",
+        "author": {
+          "name": "Joel Wembo",
+          "profileImage": "https://miro.medium.com/v2/resize:fill:20:20/1*nXyvQ3PIVmE63EPQ1uSIHw.png",
+          "publication": "Django Unleashed",
+          "publicationUrl": "https://medium.com/django-unleashed"
+        },
+        "title": "Technical Guide: End-to-End CI/CD DevOps with Jenkins, Docker, Kubernetes, ArgoCD, Github Actions",
+        "subtitle": "Building an end-to-end CI/CD pipeline for Django applications using Jenkins, Docker, Kubernetes, ArgoCD, AWS EKS, AWS EC2",
+        "createdAt": "2023-04-13",
+        "stats": {
+          "views": 971,
+          "responses": 21
+        },
+        "thumbnail": {
+          "small": "https://miro.medium.com/v2/resize:fill:80:53/1*rlPRYAfJ_aFOfoj52U7y2A.png",
+          "large": "https://miro.medium.com/v2/resize:fill:160:107/1*rlPRYAfJ_aFOfoj52U7y2A.png"
+        },
+        "links": {
+          "storyUrl": "https://medium.com/django-unleashed/technical-guide-end-to-end-ci-cd-devops-with-jenkins-docker-kubernetes-argocd-github-actions-fee466fe949e",
+          "authorUrl": "/@joelotepawembo"
+        },
+        "metadata": {
+          "isMemberOnly": true
+        }
+      },
+      {
+        "postId": "ba768514fbad",
+        "author": {
+          "name": "Kallol Mazumdar",
+          "profileImage": "https://miro.medium.com/v2/resize:fill:20:20/1*AZxiin1Cvws3J0TwNUP2sQ.png",
+          "publication": "ILLUMINATION",
+          "publicationUrl": "https://medium.com/illumination"
+        },
+        "title": "I Went on the Dark Web and Instantly Regretted It",
+        "subtitle": "Accessing the forbidden parts of the World Wide Web, only to realize the depravity of humanity",
+        "createdAt": "2023-03-13",
+        "stats": {
+          "views": 26000,
+          "responses": 567
+        },
+        "thumbnail": {
+          "small": "https://miro.medium.com/v2/resize:fill:80:53/1*W8O8aFMRCtr_cGGoLBto7A.jpeg",
+          "large": "https://miro.medium.com/v2/resize:fill:160:107/1*W8O8aFMRCtr_cGGoLBto7A.jpeg"
+        },
+        "links": {
+          "storyUrl": "https://medium.com/illumination/i-went-on-the-dark-web-and-instantly-regretted-ba768514fbad",
+          "authorUrl": "/@kallolmazumdar"
+        },
+        "metadata": {
+          "isMemberOnly": false
+        }
+      },
+      {
+        "postId": "57bc5ae79ca7",
+        "author": {
+          "name": "Andrew Zuo",
+          "profileImage": "https://miro.medium.com/v2/resize:fill:20:20/1*FZEG_DxaZ4g-w10VST7WGg.jpeg",
+          "profileUrl": "https://medium.com/@impure"
+        },
+        "title": "Why Serverless Is A Scam",
+        "subtitle": "There is a growing shift away from serverless solutions back to putting things on servers. I recently discussed this in my post A Eulogy…",
+        "createdAt": "2023-11-23",
+        "stats": {
+          "views": 929,
+          "responses": 42
+        },
+        "thumbnail": {
+          "small": "https://miro.medium.com/v2/da:true/resize:fill:80:53/0*S21oqkkXXCRLbrkN",
+          "large": "https://miro.medium.com/v2/da:true/resize:fill:160:107/0*S21oqkkXXCRLbrkN"
+        },
+        "links": {
+          "storyUrl": "https://medium.com/@impure/why-serverless-is-a-scam-57bc5ae79ca7"
+        },
+        "metadata": {
+          "isMemberOnly": true
+        }
+      }
+    ]
+  }

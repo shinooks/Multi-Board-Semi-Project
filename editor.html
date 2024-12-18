@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor</title>
+    <style>
+      /* CSS 스타일 정의 */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .editor {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      .editor-area {
+        width: 100%;
+        height: 200px;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .toolbar {
+        margin-bottom: 10px;
+      }
+
+      .toolbar button {
+        margin-right: 5px;
+      }
+
+      .footnote {
+        font-size: 0.8em;
+        color: #555;
+      }
+    </style>
+    <!-- 필요한 라이브러리 추가 -->
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"
+    />
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+  </head>
+  <body>
+    <!-- HTML 편집기 -->
+    <div class="editor">
+      <h2>HTML Editor</h2>
+      <div id="html-editor" class="editor-area"></div>
+      <div class="footnote">* Quill.js 사용</div>
+    </div>
+
+    <!-- Markdown 편집기 -->
+    <div class="editor">
+      <h2>Markdown Editor</h2>
+      <div id="markdown-editor" class="editor-area"></div>
+      <div class="footnote">* Toast UI Editor 사용</div>
+    </div>
+
+    <!-- SVG 편집기 -->
+    <div class="editor">
+      <h2>SVG Editor</h2>
+      <div class="toolbar">
+        <button onclick="addRectangle()">Rectangle</button>
+        <button onclick="addCircle()">Circle</button>
+        <button onclick="addText()">Text</button>
+      </div>
+      <canvas id="svg-editor" class="editor-area"></canvas>
+      <div class="footnote">* Fabric.js 사용</div>
+    </div>
+
+    <button id="save-button">Save</button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // HTML 편집기 초기화
+        const quill = new Quill("#html-editor", {
+          theme: "snow",
+        });
+        quill.clipboard.dangerouslyPasteHTML(
+          "<h1>HTML 문서</h1><p>이것은 <strong>HTML</strong> 문서입니다.</p>"
+        );
+
+        // Markdown 편집기 초기화
+        const markdownEditor = new toastui.Editor({
+          el: document.querySelector("#markdown-editor"),
+          height: "200px",
+          initialEditType: "wysiwyg",
+          previewStyle: "vertical",
+          initialValue: "# Markdown 문서\n이것은 **Markdown** 문서입니다.",
+        });
+
+        // SVG 편집기 초기화
+        const canvas = new fabric.Canvas("svg-editor");
+        canvas.setWidth(400);
+        canvas.setHeight(200);
+
+        window.addRectangle = function () {
+          const rect = new fabric.Rect({
+            left: 50,
+            top: 50,
+            fill: "blue",
+            width: 50,
+            height: 50,
+          });
+          canvas.add(rect);
+        };
+
+        window.addCircle = function () {
+          const circle = new fabric.Circle({
+            left: 150,
+            top: 50,
+            fill: "green",
+            radius: 30,
+          });
+          canvas.add(circle);
+        };
+
+        window.addText = function () {
+          const text = new fabric.Text("Hello", {
+            left: 250,
+            top: 50,
+            fill: "red",
+          });
+          canvas.add(text);
+        };
+
+        // Save 버튼 클릭 이벤트
+        document
+          .getElementById("save-button")
+          .addEventListener("click", function () {
+            const htmlContent = quill.root.innerHTML;
+            const markdownContent = markdownEditor.getMarkdown();
+            const svgContent = canvas.toSVG();
+
+            const contentJson = {
+              html: { content: htmlContent },
+              markdown: { content: markdownContent },
+              svg: { content: svgContent },
+            };
+
+            console.log("Saved content:", JSON.stringify(contentJson, null, 2));
+            alert("Content saved! Check the console for details.");
+            // 실제로는 서버에 저장하는 로직이 필요합니다.
+          });
+      });
+    </script>
+  </body>
+</html>

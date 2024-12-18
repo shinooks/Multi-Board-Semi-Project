@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Renderer</title>
+    <style>
+      /* CSS 스타일 정의 */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      div {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HTML 콘텐츠를 표시할 영역 -->
+    <div id="html-content"></div>
+    <!-- Markdown 콘텐츠를 표시할 영역 -->
+    <div id="markdown-content"></div>
+    <!-- SVG 콘텐츠를 표시할 영역 -->
+    <div id="svg-content"></div>
+
+    <!-- JavaScript 코드 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // content.json 파일을 가져와서 각 콘텐츠를 렌더링
+        fetch("content.json")
+          .then((response) => response.json()) // JSON 파일을 파싱
+          .then((data) => {
+            // HTML 콘텐츠 렌더링
+            document.getElementById("html-content").innerHTML =
+              data.html.content;
+
+            // Markdown 콘텐츠를 HTML로 변환하여 렌더링
+            document.getElementById("markdown-content").innerHTML =
+              marked.parse(data.markdown.content);
+
+            // SVG 콘텐츠 렌더링
+            document.getElementById("svg-content").innerHTML = data.svg.content;
+          })
+          .catch((error) => console.error("Error loading content:", error)); // 오류 처리
+      });
+    </script>
+  </body>
+</html>

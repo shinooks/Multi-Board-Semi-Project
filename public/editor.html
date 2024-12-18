@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 작성</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <header>
+    <h1>게시글 작성</h1>
+    <div>
+      <label for="mode-select">모드 선택:</label>
+      <select id="mode-select">
+        <option value="rich">기본 모드</option>
+        <option value="markdown">마크다운</option>
+        <option value="html">HTML</option>
+      </select>
+      <button id="save-btn">저장</button>
+    </div>
+  </header>
+
+  <div id="editor-container">
+    <!-- 에디터 영역 -->
+    <div id="rich-editor" contenteditable="true"></div>
+    <textarea id="markdown-editor" style="display: none;"></textarea>
+    <textarea id="html-editor" style="display: none;"></textarea>
+  </div>
+
+  <script src="editor.js"></script>
+</body>
+</html>
