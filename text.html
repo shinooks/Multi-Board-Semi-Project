@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown 게시판</title>
+  <script src="https://cdn.jsdelivr.net/npm/@stackedit/js@1.0.4/dist/stackedit.min.js"></script>
+  <style>
+    #markdown-editor {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Markdown 게시판</h1>
+  <textarea id="markdown-editor"></textarea>
+  <button id="submit">게시하기</button>
+
+  <script>
+    const stackEdit = new StackEdit();
+    const markdownEditor = document.getElementById('markdown-editor');
+
+    // StackEdit 초기화
+    stackEdit.openFile({
+      name: 'Markdown File',
+      content: {
+        text: '',
+      },
+    });
+
+    // 콘텐츠 변경 시 동기화
+    stackEdit.on('fileChange', (file) => {
+      markdownEditor.value = file.content.text;
+    });
+
+    // 게시 버튼 이벤트
+    document.getElementById('submit').addEventListener('click', () => {
+      const content = markdownEditor.value;
+      console.log('Markdown 내용:', content);
+      alert('게시물이 로그에 출력되었습니다.');
+    });
+  </script>
+</body>
+</html>
